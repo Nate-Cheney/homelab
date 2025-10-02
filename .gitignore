@@ -1,0 +1,11 @@
+# Cloudflared
+.env
+
+# Homepage
+homepage/.env
+
+# Immich
+immich/.env
+immich/library/
+immich/postgres/
+

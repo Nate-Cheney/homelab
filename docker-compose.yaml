@@ -1,0 +1,19 @@
+include:
+  - ./homepage/docker-compose.yaml
+  - ./immich/docker-compose.yaml
+
+
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run 
+    environment:
+      - TUNNEL_TOKEN=${CF_TOKEN}
+    restart: unless-stopped
+    networks:
+      - homelab-net
+
+networks:
+  homelab-net:
+    driver: bridge
+    name: homelab-net

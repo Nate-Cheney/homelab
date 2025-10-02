@@ -1,0 +1,20 @@
+[2025-10-02T19:01:07.203Z] info: kubernetes.yaml was copied to the config folder
+[2025-10-02T19:10:45.489Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.592Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.595Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.597Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.603Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.605Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.608Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.611Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.613Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.615Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.619Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:10:45.621Z] error: Host validation failed for: nate-laptop-2:3000. Hint: Set the HOMEPAGE_ALLOWED_HOSTS environment variable to allow requests from this host / port.
+[2025-10-02T19:11:37.864Z] info: docker.yaml was copied to the config folder
+[2025-10-02T19:11:37.865Z] info: services.yaml was copied to the config folder
+[2025-10-02T19:11:37.866Z] info: bookmarks.yaml was copied to the config folder
+[2025-10-02T19:11:37.866Z] info: widgets.yaml was copied to the config folder
+[2025-10-02T19:11:37.866Z] info: custom.css was copied to the config folder
+[2025-10-02T19:11:37.867Z] info: custom.js was copied to the config folder
+[2025-10-02T19:11:37.876Z] info: proxmox.yaml was copied to the config folder
