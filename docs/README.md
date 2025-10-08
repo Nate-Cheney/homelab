@@ -7,5 +7,9 @@ The services directory describes the configuration and start process for each se
 
 ## update
 
-The update directory describes the update process for each service
+Simply running the following from the root of the homelab directory will pull the most up-to-date version of each container and start them:
+
+```bash
+docker compose pull && docker compose up -d
+```
 

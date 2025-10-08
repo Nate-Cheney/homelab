@@ -2,10 +2,10 @@ include:
   - ./homepage/docker-compose.yaml
   - ./immich/docker-compose.yaml
 
-
 services:
   cloudflared:
     image: cloudflare/cloudflared:latest
+    container_name: cloudflared
     command: tunnel --no-autoupdate run 
     environment:
       - TUNNEL_TOKEN=${CF_TOKEN}
