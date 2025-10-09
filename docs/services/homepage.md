@@ -15,13 +15,13 @@ Homepage is a highly customizable application dashboard with built in integratio
 ```.env
 
 # A comma separated list of all addresses and domains that should be allowed to access homepage.
-HOMEPAGE_ALLOWED_HOSTS
+HOMEPAGE_ALLOWED_HOSTS=
 
 # The user ID of the user that runs the homepage service instead of as root.
-PUID
+PUID=
 
 # The group ID of the user that runs the homepage service instead of as root.
-PGID
+PGID=
 
 ```
 

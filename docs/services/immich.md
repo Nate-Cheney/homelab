@@ -13,25 +13,25 @@ Immich is an open source self-hosted photo and video management solution designe
 ```.env
 
 # The location where uploaded files are stored
-UPLOAD_LOCATION 
+UPLOAD_LOCATION= 
 
 # The location where database files are stored.
-DB_DATA_LOCATION 
+DB_DATA_LOCATION= 
 
 # The desired timezone. See: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
-TZ 
+TZ=
 
 # The Immich version to use (either release or a specific version like "v1.71.0")
-IMMICH_VERSION 
+IMMICH_VERSION=
 
 # The connection secret for postgres. Only use character A-Za-z0-9 without special characters or spaces
-DB_PASSWORD 
+DB_PASSWORD=
 
 # Leave as postgres
-DB_USERNAME 
+DB_USERNAME= 
 
 # Leave as immich
-DB_DATABASE_NAME 
+DB_DATABASE_NAME=
 
 ```
 
