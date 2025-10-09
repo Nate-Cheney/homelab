@@ -12,8 +12,16 @@ Homepage is a highly customizable application dashboard with built in integratio
 
 ## Environment Variables
 
-`HOMEPAGE_ALLOWED_HOSTS` is a comma separated list of all addresses and domains that should be allowed to access homepage.
+```.env
 
-`PUID` this is the user ID of the user that runs the service.
-`PGID` this it the group ID of the user that runs the service.
+# A comma separated list of all addresses and domains that should be allowed to access homepage.
+HOMEPAGE_ALLOWED_HOSTS
+
+# The user ID of the user that runs the homepage service instead of as root.
+PUID
+
+# The group ID of the user that runs the homepage service instead of as root.
+PGID
+
+```
 
