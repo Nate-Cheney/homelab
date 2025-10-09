@@ -5,11 +5,11 @@ This directory contains all necessary documentation to maintain my homelab.
 
 The services directory describes the configuration and start process for each service.
 
-(cloudflared)[https://github.com/Nate-Cheney/homelab/blob/main/docs/services/cloudflared.md]
+[cloudflared](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/cloudflared.md)
 
-(homepage)[https://github.com/Nate-Cheney/homelab/blob/main/docs/services/homepage.md]
+[homepage](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/homepage.md)
 
-(immich)[https://github.com/Nate-Cheney/homelab/blob/main/docs/services/immich.md]
+[immich](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/immich.md)
 
 ## update
 

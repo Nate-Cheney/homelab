@@ -1,7 +1,7 @@
 
 Homepage is a highly customizable application dashboard with built in integrations for a number of services. Homepage is configured via YAML files.
 
-(Back to README)[https://gethomepage.dev/configs/settings/]
+[Back to README](https://gethomepage.dev/configs/settings/)
 
 ## Initial Setup
 
