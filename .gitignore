@@ -10,3 +10,5 @@ immich/.env
 immich/library/
 immich/postgres/
 
+# Linkding
+linkding/data/

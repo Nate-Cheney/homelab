@@ -1,0 +1,12 @@
+
+services:
+  linkding:
+    container_name: linkding
+    image: ghcr.io/sissbruecker/linkding:latest
+    ports:
+      - 9090:9090
+    volumes:
+      - ./data:/etc/linkding/data
+    env_file:
+    restart: unless-stopped
+
