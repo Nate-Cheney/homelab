@@ -1,6 +1,20 @@
 ---
-# For configuration options and examples, please see:
-# https://gethomepage.dev/configs/settings/
+
+theme: dark
+color: gray 
+headerStyle: clean
+
+background:
+  image: images/zion.jpg
+  blur: sm
+  brightness: 75
+  opacity: 50
+
+layout:
+  Quick Links:
+    style: row
+    columns: 3
+
 
 providers:
   openweathermap: openweathermapapikey

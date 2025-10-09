@@ -3,6 +3,7 @@
 
 # Homepage
 homepage/.env
+homepage/app/config/logs/homepage.log
 
 # Immich
 immich/.env

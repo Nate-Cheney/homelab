@@ -2,17 +2,27 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/bookmarks
 
-- Developer:
-    - Github:
-        - abbr: GH
-          href: https://github.com/
+- Quick Links:
+  - Proton:
+    - icon: si-proton
+      href: https://account.proton.me/apps
 
-- Social:
-    - Reddit:
-        - abbr: RE
-          href: https://reddit.com/
+  - YouTube:
+    - icon: si-youtube
+      href: https://youtube.com
 
-- Entertainment:
-    - YouTube:
-        - abbr: YT
-          href: https://youtube.com/
+  - Github:
+    - icon: si-github
+      href: https://github.com/Nate-Cheney
+
+  - Gemini:
+    - icon: si-googlegemini
+      href: https://gemini.google.com/app
+
+  - Tailscale:
+    - icon: si-tailscale
+      href: https://login.tailscale.com/admin/machines
+
+  - Cloudflare:
+    - icon: si-cloudflare
+      href: https://dash.cloudflare.com
