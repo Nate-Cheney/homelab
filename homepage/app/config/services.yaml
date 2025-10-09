@@ -1,10 +1,13 @@
 ---
-# For configuration options and examples, please see:
-# https://gethomepage.dev/configs/services/
 
 - Homelab:
     - Immich:
         icon: immich.svg
         href: https://immich.cheney.win/photos
         description: Self-hosted photo and video management
+
+    - Linkding:
+        icon: linkding.svg
+        href: https://linkding.cheney.win/bookmarks
+        description: Self-hosted bookmark manager
 
