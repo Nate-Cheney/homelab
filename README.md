@@ -11,5 +11,5 @@ Every application served through a cloudflare tunnel is added to the `homelab-ne
 
 ## Documentation
 
-Documentation can be found in the docs directory or (here)[./docs/README.md].
+Documentation can be found in the docs directory or [here](./docs/README.md).
 
