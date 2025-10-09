@@ -3,7 +3,7 @@ Cloudflared is a server-side daemon that tunnels securely routes server traffic 
 
 The cloudflared service is controlled by the master docker compose file. The homelab-net docker network is utilized so that the tunnel can reference the services by their names rather than a private IP.
 
-[Back to README](https://gethomepage.dev/configs/settings/)
+[Back to README](https://github.com/Nate-Cheney/homelab/tree/main/docs#readme)
 
 ## Setup
 
