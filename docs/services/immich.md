@@ -1,6 +1,8 @@
 
 Immich is an open source self-hosted photo and video management solution designed as an alternative to Google Photos.
 
+(Back to README)[https://gethomepage.dev/configs/settings/]
+
 ## Initial Setup
 
 1. Go to the .env in /immich.
