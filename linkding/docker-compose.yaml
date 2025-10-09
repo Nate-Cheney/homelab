@@ -7,6 +7,7 @@ services:
       - 9090:9090
     volumes:
       - ./data:/etc/linkding/data
-    env_file:
     restart: unless-stopped
+    networks:
+      - homelab-net
 

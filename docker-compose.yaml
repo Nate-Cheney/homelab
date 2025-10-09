@@ -1,6 +1,7 @@
 include:
   - ./homepage/docker-compose.yaml
   - ./immich/docker-compose.yaml
+  - ./linkding/docker-compose.yaml
 
 services:
   cloudflared:
