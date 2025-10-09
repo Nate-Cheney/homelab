@@ -11,4 +11,4 @@ Every application served through a cloudflare tunnel is added to the `homelab-ne
 
 ## Documentation
 
-For additional documentation, see the `docs` directory. An overview is available in the [README](./docs/README.md).
+For additional documentation, see the `docs` directory. An overview is available in the [README](https://github.com/Nate-Cheney/homelab/tree/main/docs).
