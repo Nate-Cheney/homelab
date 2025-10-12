@@ -9,7 +9,7 @@ The purpose of my homelab is to learn. It is an environment where I can try new 
 
 ## To-do
 
-- [ ] fail2ban
+- [x] fail2ban
 - [ ] 2fa for ssh
 
 ## Overview
@@ -27,6 +27,19 @@ Every application served through a cloudflare tunnel is added to the `homelab-ne
 My homelab currently runs on an old `HP ZBook Studio x360 G5` that I got as a give-a-way.
 
 #### Security
+
+###### Fail2Ban
+
+I installed Fail2Ban using my OS' package manager. I've added the following configuration to `/etc/fail2ban/jail.local`.
+
+``` /etc/fail2ban/jail.local
+[DEFAULT]
+
+bantime = 30m
+
+findtime = 10m
+maxretry = 5
+```
 
 ###### Firewall
 
