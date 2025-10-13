@@ -13,23 +13,27 @@ sudo apt install libpam-google-authenticator
 
 #### 2. Configure SSH
 
-Append the following to `/etc/pam.d/ssh`:
+Modify `/etc/pam.d/ssh`:
 
 ``` /etc/pam.d/ssh
-auth required pam_google_authenticator.so
+# @include common-auth # COMMENT THIS LINE OUT
+auth required pam_google_authenticator.so # ADD THIS LINE UNDERNEATH
+```
+
+Modify / add the following lines in `etc/ssh/sshd_config`:
+
+``` etc/ssh/sshd_config
+ChallengeResponseAuthentication yes # CHANGE TO YES
+
+# ADD THE FOLLOWING
+KbdInteractiveAuthentication yes
+AuthenticationMethods publickey,keyboard-interactive
 ```
 
 Restart the ssh daemon:
 
 ``` bash
 sudo systemctl restart sshd.service
-```
-
-Modify `etc/ssh/sshd_config`:
-
-``` etc/ssh/sshd_config
-# Change to yes to enable challenge-response passwords 
-ChallengeResponseAuthentication no # CHANGE THIS TO YES
 ```
 
 #### 3. Configure Authentication
@@ -55,4 +59,8 @@ Answer the questions using the recommended configuration:
 | Disallow multiple uses                      | yes  | Prevents 2FA codes from being reused     |
 | Increase the original generation time limit | no   | Handles clock skew                       |
 | Enable rate-limiting                        | yes  | Aids in brute-force attack prevention    |
+
+#### 4. Test
+
+**Before closing the current ssh session**, open a new terminal and attempt to connect. If you're prompted for a verification code and are able to connect, everything is correct.
 
