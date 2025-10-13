@@ -54,7 +54,8 @@ maxretry = 5
 
 ###### SSH
 
-I've hardened SSH by doing the following:
+Aside from installing fail2ban, I've hardened SSH by doing the following:
+- Enabled 2fa (see [2fa](https://github.com/Nate-Cheney/homelab/tree/main/docs/ssh.md) for more)
 - Preventing root logins.
 - Disabled password authentication.
 - Disabled empty passwords.
