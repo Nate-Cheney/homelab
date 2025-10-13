@@ -1,10 +1,6 @@
 
 ## 2 Factor Authentication (2fa)
 
-I've used [this guide](https://ubuntu.com/tutorials/configure-ssh-2fa#1-overview) to enable 2fa for ssh sessions on my homelab server.
-
-## Steps
-
 #### 1. Install Google Authenticator PAM module
 
 ``` bash
