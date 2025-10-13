@@ -1,9 +1,11 @@
 
 This directory contains all necessary documentation to maintain my homelab.
 
+[back](https://github.com/Nate-Cheney/homelab)
+
 ## services
 
-The services directory describes the configuration and start process for each service.
+The services directory describes the configuration and setup process for each service.
 
 [cloudflared](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/cloudflared.md)
 
