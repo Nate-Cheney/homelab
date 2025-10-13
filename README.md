@@ -1,7 +1,9 @@
 
 ## Homelab
 
-This repository contains the configuration and documentation for my homelab.
+This repository contains the configuration and documentation for my homelab. 
+
+I originally ran these services in dedicated VMs on a Proxmox server and relied on memory to manage everything. By documenting 'everything' I hope to increase the maintainability of my homelab.
 
 ## Goals
 
