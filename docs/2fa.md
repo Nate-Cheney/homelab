@@ -1,5 +1,9 @@
 
-## 2 Factor Authentication (2fa)
+## 2 Factor Authentication (2FA)
+
+The following document describes the steps I took to enable 2FA as a requirement to establish an SSH connection with my server.
+
+[back](https://github.com/Nate-Cheney/homelab)
 
 #### 1. Install Google Authenticator PAM module
 
