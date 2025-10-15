@@ -39,11 +39,9 @@ DB_DATABASE_NAME=
 
 While not the ideal [3-2-1 backup strategy](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/), I am using [syncthing](https://docs.syncthing.net/index.html) to copy the `UPLOAD_LOCATION` and `DB_DATA_LOCATION` directories to my PC.
 
-#### Syncthing setup
-
 The following steps can be followed to copy my setup.
 
-1. Install required packages
+#### 1. Install required packages
 
 On the server:
 
@@ -57,7 +55,7 @@ On the desktop:
 sudo pacman -Sy syncthing
 ```
 
-2. Start syncthing
+#### 2. Start syncthing
 
 On the server:
 
@@ -71,7 +69,7 @@ On the PC:
 syncthing
 ```
 
-3. Add the remote devices
+#### 3. Add the remote devices
 
 On the PC, navigate to the syncthing web-ui: `http://127.0.0.1:8384`. Select _Add Remote Device_, paste in the ID from the server, and enter the desired name.
 
@@ -90,7 +88,7 @@ syncthing cli config devices list
 
 On the PC, you can verify that the server was added by checking the `Remote Devices` section of the syncthing web-ui. It should say _Connected (Unused)_.
 
-4. Add the directories to share
+#### 4. Add the directories to share
 
 To add the directories, run the following from the server:
 
@@ -104,7 +102,7 @@ syncthing cli config folders "immich-library" devices add --device-id "PC-DEVICE
 syncthing cli config folders "immich-postgres" devices add --device-id "PC-DEVICE-ID"
 ```
 
-5. Accept the share 
+#### 5. Accept the share 
 
 On the PC, navigate to the syncthing web-ui (`http://127.0.0.1:8384`). You will see two new boxes inviting you to accept each share.
 
@@ -114,7 +112,7 @@ Set the folder path as desired.
 
 Select _Advanced_ and set _Folder Type_ to `Read Only`.
 
-6. Set ACL permissions
+#### 6. Set ACL permissions
 
 Using acl (installed in step 1) we're going to set permissions for the `/path/to/homelab/immich/postgres` directory. Run the following:
 
@@ -129,7 +127,7 @@ sudo setfacl -R -d -m u:$USER:rX /path/to/homelab/immich/postgres
 sudo setfacl -m u:$USER:rwx  /path/to/homelab/immich/postgres
 ```
 
-7. Start sync & run as service
+#### 7. Start sync & run as service
 
 In order to start the sync, both clients need to be restarted. `Ctrl + c` to quit syncthing on both the server and PC.
 
