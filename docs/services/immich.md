@@ -43,13 +43,15 @@ While not the ideal [3-2-1 backup strategy](https://www.backblaze.com/blog/the-3
 
 The following steps can be followed to copy my setup.
 
-1. Install syncthing on the desired machines
+1. Install required packages
+
+On the server:
 
 ``` bash
-sudo apt update && sudo apt install -y syncthing
+sudo apt update && sudo apt install -y acl syncthing
 ```
 
-or 
+On the desktop:
 
 ``` bash
 sudo pacman -Sy syncthing
@@ -94,8 +96,8 @@ To add the directories, run the following from the server:
 
 ``` bash
 # Add folders
-syncthing cli config folders add --id "immich-library" --path "/path/to/homelab/library"
-syncthing cli config folders add --id "immich-postgres" --path "/path/to/homelab/postgres"
+syncthing cli config folders add --id "immich-library" --path "/path/to/homelab/immich/library"
+syncthing cli config folders add --id "immich-postgres" --path "/path/to/homelab/immich/postgres"
 
 # Share folders
 syncthing cli config folders "immich-library" devices add --device-id "PC-DEVICE-ID"
@@ -112,7 +114,22 @@ Set the folder path as desired.
 
 Select _Advanced_ and set _Folder Type_ to `Read Only`.
 
-6. Start sync & run as service
+6. Set ACL permissions
+
+Using acl (installed in step 1) we're going to set permissions for the `/path/to/homelab/immich/postgres` directory. Run the following:
+
+``` bash
+# Give your user read and execute permissions recursively
+sudo setfacl -R -m u:$USER:rX /path/to/homelab/immich/postgres
+
+# Make sure new files created by postgres also get these permissions
+sudo setfacl -R -d -m u:$USER:rX /path/to/homelab/immich/postgres
+
+# Allow syncthing to create its .stfolder marker
+sudo setfacl -m u:$USER:rwx  /path/to/homelab/immich/postgres
+```
+
+7. Start sync & run as service
 
 In order to start the sync, both clients need to be restarted. `Ctrl + c` to quit syncthing on both the server and PC.
 
