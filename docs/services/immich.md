@@ -35,3 +35,93 @@ DB_DATABASE_NAME=
 
 ```
 
+## Backups
+
+While not the ideal [3-2-1 backup strategy](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/), I am using [syncthing](https://docs.syncthing.net/index.html) to copy the `UPLOAD_LOCATION` and `DB_DATA_LOCATION` directories to my PC.
+
+#### Syncthing setup
+
+The following steps can be followed to copy my setup.
+
+1. Install syncthing on the desired machines
+
+``` bash
+sudo apt update && sudo apt install -y syncthing
+```
+
+or 
+
+``` bash
+sudo pacman -Sy syncthing
+```
+
+2. Start syncthing
+
+On the server:
+
+``` bash
+syncthing -no-browse
+```
+
+On the PC:
+
+``` bash
+syncthing
+```
+
+3. Add the remote devices
+
+On the PC, navigate to the syncthing web-ui: `http://127.0.0.1:8384`. Select _Add Remote Device_, paste in the ID from the server, and enter the desired name.
+
+On the server, run the following to add the PC:
+
+``` bash
+syncthing cli config devices add --device-id "DEVICE-ID-HERE" --name "PC Name"
+```
+
+On the server, you can verify that the PC was added by running:
+
+``` bash
+# Should return both device IDs
+syncthing cli config devices list
+```
+
+On the PC, you can verify that the server was added by checking the `Remote Devices` section of the syncthing web-ui. It should say _Connected (Unused)_.
+
+4. Add the directories to share
+
+To add the directories, run the following from the server:
+
+``` bash
+# Add folders
+syncthing cli config folders add --id "immich-library" --path "/path/to/homelab/library"
+syncthing cli config folders add --id "immich-postgres" --path "/path/to/homelab/postgres"
+
+# Share folders
+syncthing cli config folders "immich-library" devices add --device-id "PC-DEVICE-ID"
+syncthing cli config folders "immich-postgres" devices add --device-id "PC-DEVICE-ID"
+```
+
+5. Accept the share 
+
+On the PC, navigate to the syncthing web-ui (`http://127.0.0.1:8384`). You will see two new boxes inviting you to accept each share.
+
+Click the green _Share_ button. 
+
+Set the folder path as desired. 
+
+Select _Advanced_ and set _Folder Type_ to `Read Only`.
+
+6. Start sync & run as service
+
+In order to start the sync, both clients need to be restarted. `Ctrl + c` to quit syncthing on both the server and PC.
+
+To enable and start syncthing as a service run the following:
+
+``` bash
+sudo systemctl enable syncthing@$USER
+sudo systemctl start syncthing@$USER
+```
+
+Syncthing should now be running as a service and begin syncing everything.
+
