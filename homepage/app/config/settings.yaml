@@ -5,7 +5,7 @@ color: gray
 headerStyle: clean
 
 background:
-  image: images/zion.jpg
+  image: images/small_zion.jpg
   blur: sm
   brightness: 75
   opacity: 50
