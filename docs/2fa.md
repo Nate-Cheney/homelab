@@ -24,10 +24,6 @@ Modify / add the following lines in `etc/ssh/sshd_config`:
 
 ``` etc/ssh/sshd_config
 ChallengeResponseAuthentication yes # CHANGE TO YES
-
-# ADD THE FOLLOWING
-KbdInteractiveAuthentication yes
-AuthenticationMethods publickey,keyboard-interactive
 ```
 
 Restart the ssh daemon:
