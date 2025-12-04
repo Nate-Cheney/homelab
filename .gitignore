@@ -12,3 +12,10 @@ immich/postgres/
 
 # Linkding
 linkding/data/
+
+# Nextcloud
+nextcloud/.env
+nextcloud/tailscale-data/
+
+# Rustdesk
+rustdesk/data/
