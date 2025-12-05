@@ -9,6 +9,10 @@ I originally ran these services in dedicated VMs on a Proxmox server and relied 
 
 The purpose of my homelab is to learn. It is an environment where I can try new things, make mistakes, practice debugging, and fix issues.
 
+## To Do
+
+- [ ] Add Tailscale container to RustDesk service and route traffic through a separate docker network.
+
 ## Overview
 
 Each service is managed by it's own docker-compose.yaml file in it's directory. These services are included in the "master" docker-compose.yaml in the root of this repo.
@@ -50,9 +54,8 @@ maxretry = 5
 ###### SSH
 
 Aside from installing fail2ban, I've hardened SSH by doing the following:
-- Enabled 2FA (see [2fa](https://github.com/Nate-Cheney/homelab/tree/main/docs/2fa.md) for more)
+- Enabled 2FA for non key-based auth (see [2fa](https://github.com/Nate-Cheney/homelab/tree/main/docs/2fa.md) for more)
 - Preventing root logins.
-- Disabled password authentication.
 - Disabled empty passwords.
 - Limit client inactivity to 5 mins.
 - Limit client connections to 2.

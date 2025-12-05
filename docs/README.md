@@ -15,6 +15,8 @@ The services directory describes the configuration and setup process for each se
 
 [linkding](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/linkding.md)
 
+[rustdesk](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/rustdesk.md)
+
 ## update
 
 Simply running the following from the root of the homelab directory will pull the most up-to-date version of each container and start them:
