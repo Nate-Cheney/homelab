@@ -11,3 +11,7 @@
         href: https://linkding.cheney.win/bookmarks
         description: Self-hosted bookmark manager
 
+    - Orbital:
+        icon: si-moonrepo
+        href: https://orbital.cheney.win
+        description: A devcontainer config generator.
