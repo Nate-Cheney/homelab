@@ -15,6 +15,8 @@ The services directory describes the configuration and setup process for each se
 
 [linkding](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/linkding.md)
 
+[orbital](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/orbital.md)
+
 [rustdesk](https://github.com/Nate-Cheney/homelab/blob/main/docs/services/rustdesk.md)
 
 ## update
