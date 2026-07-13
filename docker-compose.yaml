@@ -3,11 +3,11 @@ include:
   - ./immich/docker-compose.yaml
   - ./linkding/docker-compose.yaml
   - ./orbital/docker-compose.yaml
-#  - ./rustdesk/docker-compose.yaml
+  - ./pihole/docker-compose.yaml
 
 services:
   cloudflared:
-    image: cloudflare/cloudflared:latest
+    image: cloudflare/cloudflared:2026.6.1
     container_name: cloudflared
     command: tunnel --no-autoupdate run 
     environment:

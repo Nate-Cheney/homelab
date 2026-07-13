@@ -1,7 +1,7 @@
 services:
   orbital:
     container_name: orbital
-    image: ghcr.io/nate-cheney/orbital:latest
+    image: ghcr.io/nate-cheney/orbital:v0.1.7
     ports:
       - 5000:5000 
     restart: unless-stopped
