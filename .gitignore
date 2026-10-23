@@ -1,6 +1,10 @@
 # Cloudflared
 .env
 
+# Firefly III
+fierfly/.env
+firefly/importer/
+
 # Homepage
 homepage/.env
 homepage/app/config/logs/homepage.log
@@ -17,5 +21,10 @@ linkding/data/
 nextcloud/.env
 nextcloud/tailscale-data/
 
+# Pi Hole
+etc-dnsmasq.d/
+etc-pihole/
+
 # Rustdesk
 rustdesk/data/
+

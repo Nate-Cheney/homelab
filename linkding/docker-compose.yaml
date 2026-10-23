@@ -2,7 +2,7 @@
 services:
   linkding:
     container_name: linkding
-    image: ghcr.io/sissbruecker/linkding:1.45.0
+    image: ghcr.io/sissbruecker/linkding:1.47.0
     ports:
       - 9090:9090
     volumes:
